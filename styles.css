@@ -1,0 +1,140 @@
+body {
+  background: linear-gradient(135deg, #7f53ac 0%, #657ced 100%);
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+}
+#game-root {
+  max-width: 700px;
+  margin: 32px auto;
+  background: rgba(30, 30, 40, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  padding: 24px;
+}
+header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.subtitle {
+  font-size: 1.1em;
+  color: #b3b3ff;
+  margin-top: -8px;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hidden {
+  display: none !important;
+}
+#lobby {
+  margin-top: 16px;
+}
+#player-list {
+  margin-bottom: 12px;
+  min-height: 32px;
+}
+#nickname {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 8px;
+  font-size: 1em;
+}
+#join-btn, #start-btn, #roll-btn, #restart-btn, #send-chat {
+  background: #657ced;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin: 6px 0;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#join-btn:disabled, #start-btn:disabled, #roll-btn:disabled {
+  background: #444a6d;
+  cursor: not-allowed;
+}
+#room-info {
+  margin-top: 8px;
+  color: #b3b3ff;
+}
+#board-container {
+  margin: 18px 0;
+  background: #23233b;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 10px;
+}
+#board-canvas {
+  background: #181828;
+  border-radius: 10px;
+  display: block;
+}
+#controls {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dice-result {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+#move-options {
+  margin: 8px 0;
+}
+#player-status {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #b3b3ff;
+}
+#chat {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 420px;
+  background: #23233b;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+#chat-messages {
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.98em;
+  margin-bottom: 6px;
+}
+#chat-input {
+  width: 70%;
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 6px;
+  font-size: 1em;
+}
+.emoji {
+  font-size: 1.2em;
+}
+#winner {
+  font-size: 1.3em;
+  margin: 12px 0;
+  color: #ffd700;
+}
+footer {
+  text-align: center;
+  margin-top: 18px;
+  color: #b3b3ff;
+  font-size: 0.95em;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background: #23233b;
+}
+::-webkit-scrollbar-thumb {
+  background: #657ced;
+  border-radius: 6px;
+}
