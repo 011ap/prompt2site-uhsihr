@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenZ Remote Board Game: Vibe Race</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="game-root">
+    <header>
+      <h1>Vibe Race</h1>
+      <p class="subtitle">A fast, fun, remote board game for up to 4 Gen Z players</p>
+    </header>
+    <main>
+      <div id="lobby" class="panel">
+        <h2>Lobby</h2>
+        <div id="player-list"></div>
+        <input id="nickname" placeholder="Enter your nickname" maxlength="12" />
+        <button id="join-btn">Join Game</button>
+        <button id="start-btn" disabled>Start Game</button>
+        <div id="room-info"></div>
+      </div>
+      <div id="game" class="panel hidden">
+        <div id="board-container">
+          <canvas id="board-canvas" width="500" height="500"></canvas>
+        </div>
+        <div id="controls">
+          <button id="roll-btn" disabled>🎲 Roll</button>
+          <div id="dice-result"></div>
+          <div id="move-options"></div>
+        </div>
+        <div id="player-status"></div>
+        <div id="chat">
+          <div id="chat-messages"></div>
+          <input id="chat-input" maxlength="80" placeholder="Type a message or emoji..." />
+          <button id="send-chat">Send</button>
+        </div>
+      </div>
+      <div id="game-over" class="panel hidden">
+        <h2>Game Over</h2>
+        <div id="winner"></div>
+        <button id="restart-btn">Restart</button>
+      </div>
+    </main>
+    <footer>
+      <span>Made for Gen Z • Play remotely • <span class="emoji">🚀</span></span>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.7.5/dist/socket.io.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
